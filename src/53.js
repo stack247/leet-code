@@ -8,11 +8,15 @@ var maxSubArray = function (nums) {
     // A "new start" is the start of a number of which the potential answer will be.
     // `sum` keeps the answer, which is the maximum total sum at any point.
 
+    // https://leetcode.com/problems/maximum-subarray/discuss/1622222/100-ms-faster-than-53.20-or-48.6-MB-less-than-70.24
+    // Kadanes algo: https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
     let max, sum;
     // nums.forEach((value, index, array) => {
     //     max = (array[index] <= max + array[index]) ? max + array[index] : array[index];
     //     sum = sum >= max ? sum : max;
     // });
+
+    // Translated from the LeetCode discussion
     for (let i=0; i < nums.length; i++)
     {
         let curNum = nums[i];
