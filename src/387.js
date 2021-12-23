@@ -24,10 +24,13 @@ var firstUniqChar = function(s) {
             return i;
     }
 
+    return -1;
+
     //console.log(uniq);
 };
 
-let str = "leetcode"; // answer is 0
+//let str = "leetcode"; // answer is 0
 //let str = "loveleetcode"; // answer is 2
+let str = "aabb"; // answer is -1
 let res = firstUniqChar(str);
 console.log(res);
