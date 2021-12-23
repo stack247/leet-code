@@ -3,6 +3,7 @@
  * @return {number}
  */
 var firstUniqChar = function(s) {
+    // Attempt 1 - use double loop
     //let uniq = new Set();
     for (let i = 0; i < s.length; i++) {
         //if (!uniq.has(s[i]))
@@ -27,6 +28,9 @@ var firstUniqChar = function(s) {
     return -1;
 
     //console.log(uniq);
+
+    // Attempt 2 - use dictionary
+    // https://leetcode.com/problems/first-unique-character-in-a-string/discuss/1602227/Javascript-hashmap
 };
 
 //let str = "leetcode"; // answer is 0
