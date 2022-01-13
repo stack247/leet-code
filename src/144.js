@@ -36,7 +36,7 @@ var preorderTraversal = function(root) {
     // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
     /*
     let c = root, q = [], r = [];
-    while (c !== null) {
+    while (c !== null && c !== undefined) {
         //console.log(c.val);
         r.push(c.val);
         if (c.left !== null)
@@ -46,7 +46,6 @@ var preorderTraversal = function(root) {
         c = q.shift();
         //console.log(q);
         //console.log(c);
-        //break;
     }
     */
 
