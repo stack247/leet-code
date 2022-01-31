@@ -11,7 +11,23 @@
  * @return {number[]}
  */
 var inorderTraversal = function(root) {
+    // https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/1670917/JavaScript-Solutions-(Recursive-and-Iterative)
+    let r = [], c = root, p = [];
+    while (p.length > 0 || c) {
+        if (c) {
+            p.push(c);
+            c = c.left;
+        }
+        else {
+            c = p.pop();
+            r.push(c.val);
+            c = c.right;
+        }
+    }
+    return r;
+
     // Attempt 2.
+    /*
     let c = root, pq = [], r = [];
     while (c) {
         if (c.left && r[r.length-1] !== c.left.val) {
@@ -28,6 +44,7 @@ var inorderTraversal = function(root) {
     }
 
     return r;
+    */
 
     // Attempt 1: works on https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
     /*
