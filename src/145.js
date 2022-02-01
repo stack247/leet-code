@@ -11,6 +11,7 @@
  * @return {number[]}
  */
 var postorderTraversal = function(root) {
+    // https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/1671288/JavaScript-Solutions-(Recursive-and-Iterative)
     let r=[], p=[], lastVisited;
     while (p.length > 0 || root) {
         if (root) {
