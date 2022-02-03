@@ -11,72 +11,46 @@
  * @return {number[][]}
  */
 var levelOrder = function(root) {
-    let r=[], c=root, n=[], l=0;
+    let r=[], q=[], s=[], c=root, l=0;
     while (c) {
-        cr=[];
-        cr.push(c.val);
-
+        //let rt = []; //, qt = [];
+        if (c) {
+            let rt = r[l];
+            if (!rt) {
+                rt = [];
+                r.push(rt);
+            }
+            rt.push(c.val);
+        }
         if (c.left) {
-            n.push(c.left);
+            s.push(c.left);
         }
         if (c.right) {
-            n.push(c.right);
+            s.push(c.right);
         }
-
-        r.push(cr);
-
-        c = n.pop();
-        r.push(cr);
-
-        break;
+        //console.log('s ' + s);
+        // qp = q[l];
+        // console.log('qp ' + qp);
+        // if (!qp) {
+        //     console.log('qp is none');
+        //     q.push(qt);
+        // }
+        if (q.length == 0) {
+            q = s;
+            s = [];
+            l += 1;
+        }
+        c = q.shift();
     }
+
+    //console.log('r ' + r);
+    //console.log('q ' + q);
+    //console.log(q);
+    //console.log('s ' + s);
+    //console.log('l ' + l);
+
     return r;
 };
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Level order / breadth-first traversal.
-    // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
-    /*
-    let c = root, q = [], r = [];
-    while (c !== null && c !== undefined) {
-        //console.log(c.val);
-        r.push(c.val);
-        if (c.left !== null)
-            q.push(c.left);
-        if (c.right !== null)
-            q.push(c.right);
-        c = q.shift();
-        //console.log(q);
-        //console.log(c);
-    }
-    */
-
-    //console.log('q ' + q);
-    //console.log('res ' + r);
 
 function TreeNode(val, left, right) {
     this.val = (val===undefined ? 0 : val)
@@ -98,3 +72,4 @@ console.log(rootObj.val);
 //console.log(rootObj.right.left.val);
 //console.log(rootObj.right.right.val);
 console.log('res ' + res);
+console.log(res);
