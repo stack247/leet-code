@@ -1,9 +1,6 @@
 {
   "name": "leet-code",
   "scripts": {
-    "start": "nodemon index.js"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "start": "node ./src/101.js"
   }
 }
