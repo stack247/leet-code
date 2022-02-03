@@ -13,8 +13,9 @@
 var isSymmetric = function(root) {
     console.log(root.val);
     //console.log(root.left.val);
-    //console.log(root.right.val);
-    return false;
+    console.log(root.right.val);
+    //return false;
+    return true;
 };
 
 function TreeNode(val, left, right) {
