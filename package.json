@@ -1,6 +1,6 @@
 {
   "name": "leet-code",
   "scripts": {
-    "start": "node ./src/226.js"
+    "start": "node ./src/112.js"
   }
 }
