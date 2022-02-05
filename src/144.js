@@ -63,12 +63,13 @@ function TreeNode(val, left, right) {
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
 //let root = [1,null,2,3] // answer is [1,2,3]
 //let rootObj = new TreeNode(1, null, new TreeNode(2, new TreeNode(3, null, null), null));
-let root = [1,4,2,3] // answer is [1,4,2,3]
-let rootObj = new TreeNode(1, new TreeNode(4, new TreeNode(2, null, null), null), new TreeNode(3, null, null));
+//let root = [1,4,2,3] // answer is [1,4,2,3]
+//let rootObj = new TreeNode(1, new TreeNode(4, new TreeNode(2, null, null), null), new TreeNode(3, null, null));
 //let root = [1,2,4,5,3] // answer is [1,2,4,5,3]
 //let rootObj = new TreeNode(1, new TreeNode(2, new TreeNode(4, null, null), new TreeNode(5, null, null)), new TreeNode(3, null, null));
 //let root = [] // answer is []
 //let root = [1] // answer is [1]
+let rootObj = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(7, null, null), new TreeNode(2, null, null)), null), new TreeNode(8, new TreeNode(13, null, null), new TreeNode(4, null, new TreeNode(1, null, null))));  // answer is [5,4,11,7,2,8,13,4,1]
 let res = preorderTraversal(rootObj);
 
 console.log('-------------------');
