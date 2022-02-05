@@ -8,10 +8,10 @@
  */
 /**
  * @param {TreeNode} root
- * @param {number} targetSum
- * @return {boolean}
+ * @param {number} val
+ * @return {TreeNode}
  */
-var hasPathSum = function(root, targetSum) {
+var insertIntoBST = function(root, val) {
     
 };
 
@@ -21,10 +21,10 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right)
 }
 
-// https://leetcode.com/problems/path-sum/
-let rootObj = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(7, null, null), new TreeNode(2, null, null)), null), new TreeNode(8, new TreeNode(13, null, null), new TreeNode(4, null, new TreeNode(1, null, null)))); // answer is true
-let targetSum = 5;
-let res = hasPathSum(rootObj, targetSum);
+// https://leetcode.com/problems/insert-into-a-binary-search-tree/
+let rootObj = new TreeNode(4, new TreeNode(2, new TreeNode(1, null, null), new TreeNode(3, null, null)), new TreeNode(7, null, null)); // answer is [4,2,7,1,3,5] or [5,2,7,1,3,null,null,,null,null,null,4]
+let val = 5;
+let res = insertIntoBST(rootObj, val);
 
 console.log('-------------------');
 //console.log(rootObj.val);

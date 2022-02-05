@@ -8,10 +8,10 @@
  */
 /**
  * @param {TreeNode} root
- * @param {number} targetSum
- * @return {boolean}
+ * @param {number} val
+ * @return {TreeNode}
  */
-var hasPathSum = function(root, targetSum) {
+var searchBST = function(root, val) {
     
 };
 
@@ -21,10 +21,12 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right)
 }
 
-// https://leetcode.com/problems/path-sum/
-let rootObj = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(7, null, null), new TreeNode(2, null, null)), null), new TreeNode(8, new TreeNode(13, null, null), new TreeNode(4, null, new TreeNode(1, null, null)))); // answer is true
-let targetSum = 5;
-let res = hasPathSum(rootObj, targetSum);
+// https://leetcode.com/problems/search-in-a-binary-search-tree/
+let rootObj = new TreeNode(4, new TreeNode(2, new TreeNode(1, null, null), new TreeNode(3, null, null)), new TreeNode(7, null, null)); // answer is [2,1,3]
+let val = 2;
+//let rootObj = new TreeNode(4, new TreeNode(2, new TreeNode(1, null, null), new TreeNode(3, null, null)), new TreeNode(7, null, null)); // answer is []
+//let val = 5;
+let res = searchBST(rootObj, val);
 
 console.log('-------------------');
 //console.log(rootObj.val);
